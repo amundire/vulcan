@@ -1,0 +1,45 @@
+@import url('https://use.fontawesome.com/releases/v5.5.0/css/all.css');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('reset.css');
+@import url('variables.css');
+@import url('typography.css');
+@import url('navigation.css');
+
+html{
+    color: var(--default-text-color);
+}
+
+.site-branding{
+    font-size: 3rem;
+    text-align: center;
+    a{
+        color: var(--link-text-color);
+    }
+}
+
+main, footer{
+    margin: 5rem 11rem;
+    a{
+        color: var(--link-text-color);
+    }
+}
+
+.intro{
+    h1{
+        color: rgb(125, 125, 125);
+        font-size: 4rem;
+    }
+    .intro-div{
+        display: flex;
+        p{
+            width: 50%;
+            margin-right: 2rem;
+        }
+        .intro-img-container{
+            width: 50%;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}

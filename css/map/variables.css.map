@@ -1,0 +1,1 @@
+{"version":3,"sources":["variables.scss"],"names":[],"mappings":"AAAA,K,CACI,2B,CACA,mC,CAEA,2B,CACA,4B","file":"../variables.css","sourcesContent":[":root{\r\n    --default-text-color: black;\r\n    --link-text-color: rgb(15, 94, 199);\r\n\r\n    --default-font-size: 0.9rem;\r\n    --mobile-font-size: 0.765rem;\r\n}"]}

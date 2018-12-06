@@ -1,0 +1,45 @@
+#nav-main-toggle{
+    display: none;
+}
+
+#nav-toggle{
+    display: none;
+}
+
+.site-header{
+    nav{
+        position: fixed;
+        top: 50%;
+        ul{
+            list-style-type: none;
+            width: 9rem;
+            li{
+                display: flex;
+                a{
+                    padding: 1rem 1rem;
+                    border: 2px solid var(--link-text-color);
+                    font-size: 1.5rem;
+                    width: 24%;
+                    color: var(--link-text-color);
+                    transition: 0.4s all ease;
+                    &:hover{
+                        background-color: var(--link-text-color);
+                        color: white;
+                    }
+                    &:hover + .nav-label{
+                        color: black;
+                    }
+                }
+                .nav-label{
+                    color: white;
+                    transition: 0.7s all ease;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    line-height: 3.5rem;
+                    margin-left: 0.5rem;
+                    pointer-events: none;
+                }
+            }
+        }
+    }
+}

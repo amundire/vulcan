@@ -1,0 +1,2 @@
+html{font-family:'Roboto',sans-serif;line-height:1.5;font-size:var(--mobile-font-size)}@media screen and (min-width:500px){html{font-size:var(--default-font-size)}}body,form,input,option,select,table,td,textarea,th{font-family:inherit}a{color:var(--default-text-color);text-decoration:none}h1,h2,h3,h4,h5,h6{line-height:1.2;padding-bottom:.5em}ol,p,ul{padding-bottom:.5rem}ol,ul{padding-left:1rem}li{list-style-position:inside}
+/*# sourceMappingURL=map/typography.css.map */

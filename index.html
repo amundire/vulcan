@@ -1,0 +1,33 @@
+---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+
+layout: site
+---
+<section class="intro">
+    <h1>Welcome to Vulcan</h1>
+    <div class="intro-div">
+        <p>
+            This is my Vulcan theme. Mainly inspired by the <a href="https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_ak47_cu_ak47_rubber_light_large.5836c38d3037a5a1f90ffdc8c9d0b94367ca8efd.png">AK-47 | Vulcan</a> CS:GO weapon skin.
+            The main idea I had for this static site was making it a lot like a video game interface.
+            The architecture and layout will look like the recent <a href="https://assets.rockpapershotgun.com/images/2018/08/counter-strike-global-offensive-main-panorama-ui-b.jpg/RPSS/resize/760x-1/format/jpg/quality/70">Panorama UI</a> in CS:GO.
+            What makes Panorama very special is the drastic performance improvements over the older UI. The older one was Scaleform and used Flash Player as its engine which is obviously super outdated. Panorama uses HTML/JavaScript which are dynamic, responsive and lightweight.
+        </p>
+        <div class="intro-img-container">
+            <img src="http://i.imgur.com/JejMo3J.jpg">
+        </div>
+    </div>
+</section>
+<section class="posts">
+    <h1>Posts</h1>
+    <ul class="listing posts">
+            {% for post in site.posts %}
+            <li>
+                <a href="{{ site.baseurl }}{{ post.url }}">
+                    <span class="title">{{ post.title }}</span>
+                    <span class="date">{{ post.date | date_to_string }}</span>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+</section>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width" />
+            <title>{{site.title}}</title>
+            <link rel="shortcut icon" type="image/png" href="{{site.baseurl}}/images/9167.png"/>
+            <link rel="stylesheet" href="{{ site.baseurl }}/css/styles.css" type="text/css" />
+        </head>
+        <body class="{% if page.type %}{{page.type}} {% endif %}{% if page.title %}{{ page.title | slugify }}{% else %}home{% endif %}">
+                <div class="site">
+                    <input type="checkbox" id="nav-main-toggle" name="nav-main-toggle">
+                    <header class="site-header">
+                        <div class="site-branding">
+                            <p class="site-title">
+                                <a href="{{ site.baseurl }}/">{{ site.title }}</a>
+                            </p>
+                        </div>
+                        <label id="nav-toggle" for="nav-main-toggle" class="fas nav-toggle right"><i class="fas fa-bars"></i></label>
+                        <nav class="navigation main">
+                            <ul>
+                                <li class="blog-button">
+                                    <a class="fas fa-newspaper" href="{{ site.baseurl }}/"></a>
+                                    <span class="nav-label">Home</span>
+                                </li>
+                                <li class="about-button">
+                                    <a class="fas fa-user-secret" href="{{ site.baseurl }}/about/"></a>
+                                    <span class="nav-label">About</span>
+                                </li>
+                                <!-- <li class="login-button"><a class="fas fa-key" href="{{ site.baseurl }}/login/">Login</a></li> -->
+                            </ul>
+                        </nav>
+                    </header>
+                    <main class="site-content">
+                        {{content}}
+                    </main>
+                    <footer>
+                        footer
+                    </footer>
+                </div>
+        </body>
+</html>
