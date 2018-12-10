@@ -1,0 +1,1 @@
+{"version":3,"sources":["animations.scss"],"names":[],"mappings":"A,AAAA,6BACI,E,CACI,iB,CAEJ,E,CACI,e,AALR,qBACI,E,CACI,iB,CAEJ,E,CACI,e","file":"../animations.css","sourcesContent":["@keyframes h1-onload{\r\n    from{\r\n        margin-left: -5rem\r\n    }\r\n    to{\r\n        margin-left: 0;\r\n    }\r\n}"]}

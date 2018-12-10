@@ -4,9 +4,19 @@
 @import url('variables.css');
 @import url('typography.css');
 @import url('navigation.css');
+@import url('animations.css');
 
 html{
     color: var(--default-text-color);
+    background-image: url('../images/light-blue-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1{
+    color: #363535;
+    font-size: 4rem;
+    -webkit-animation: h1-onload .4s ease-in-out;
+    animation: h1-onload .4s ease-in-out;
 }
 
 .site-branding{
@@ -25,21 +35,88 @@ main, footer{
 }
 
 .intro{
-    h1{
-        color: rgb(125, 125, 125);
-        font-size: 4rem;
-    }
     .intro-div{
         display: flex;
-        p{
+        .intro-text{
             width: 50%;
-            margin-right: 2rem;
-        }
-        .intro-img-container{
-            width: 50%;
-            img{
-                width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            p{
+                margin-right: 2rem;
+            }
+            a.intro-anchor{
+                font-size: 1.5rem;
+                margin: 1rem;
+                .fa-angle-left{
+                    .intro-more{
+                        border-top: 2px solid var(--link-text-color);
+                        border-bottom: 2px solid var(--link-text-color);
+                        padding: 0.5rem;
+                        margin: 1rem 0.5rem;
+                        transition: 0.3s ease;
+                        &:hover{
+                            color: white;
+                            background: var(--link-text-color);
+                        }
+                    }
+                }
             }
         }
+        
+        .intro-img-container{
+            width: 50%;
+            margin: 1rem 0;
+            img{
+                width: 100%;
+                transition: 0.6s;
+                 &:hover{
+                    transform: scale(1.1);
+                    -webkit-box-shadow: 0px -2px 18px 5px rgba(100, 147, 185, 1);
+                    -moz-box-shadow: 0px -2px 18px 5px rgba(100, 147, 185, 1);
+                    box-shadow: 0px -2px 18px 5px rgba(100, 147, 185, 1);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1301px){
+    .site-content{
+        margin: 5rem 5rem 11rem 11rem;
+        .intro{
+            .intro-div{
+                flex-direction: column;
+                .intro-text{
+                    width: 75%
+                }
+                .intro-img-container{
+                    width: 75%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 801px){
+    .site-content{
+        margin: 0 5rem 5rem 5rem;
+        .intro{
+            .intro-div{
+                .intro-text{
+                    width: 110%;
+                }
+                .intro-img-container{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 300px){
+    .site-content{
+        margin: 0 1rem 5rem 1rem;
     }
 }

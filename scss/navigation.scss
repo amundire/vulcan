@@ -21,17 +21,18 @@
                     font-size: 1.5rem;
                     width: 24%;
                     color: var(--link-text-color);
-                    transition: 0.4s all ease;
+                    transition: 0.4s ease;
                     &:hover{
                         background-color: var(--link-text-color);
                         color: white;
                     }
                     &:hover + .nav-label{
-                        color: black;
+                        opacity: 1;
                     }
                 }
                 .nav-label{
-                    color: white;
+                    opacity: 0;
+                    color: black;
                     transition: 0.7s all ease;
                     text-transform: uppercase;
                     font-weight: 600;
@@ -39,6 +40,20 @@
                     margin-left: 0.5rem;
                     pointer-events: none;
                 }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 801px){
+    .navigation{
+        position: initial !important;
+        display: flex;
+        justify-content: center;
+        ul{
+            display: flex;
+            li{
+                flex-direction: column;
             }
         }
     }
