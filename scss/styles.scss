@@ -8,9 +8,6 @@
 
 html{
     color: var(--default-text-color);
-    background-image: url('../images/light-blue-background.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 h1{
     color: #363535;
@@ -33,49 +30,111 @@ main, footer{
         color: var(--link-text-color);
     }
 }
-
-.intro{
-    .intro-div{
-        display: flex;
-        .intro-text{
-            width: 50%;
+.site-content{
+    section{
+        border-bottom: 1px solid var(--link-text-color);
+        margin: 2rem 0;
+        padding-bottom: 2rem;
+    }
+    .intro{
+        .intro-div{
             display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            p{
-                margin-right: 2rem;
-            }
-            a.intro-anchor{
-                font-size: 1.5rem;
-                margin: 1rem;
-                .fa-angle-left{
-                    .intro-more{
-                        border-top: 2px solid var(--link-text-color);
-                        border-bottom: 2px solid var(--link-text-color);
-                        padding: 0.5rem;
-                        margin: 1rem 0.5rem;
-                        transition: 0.3s ease;
-                        &:hover{
-                            color: white;
-                            background: var(--link-text-color);
+            width: 100%;
+            .intro-text{
+                width: 75%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                p{
+                    margin-right: 2rem;
+                }
+                a.intro-anchor{
+                    font-size: 1.5rem;
+                    margin: 1rem;
+                    width: 55%;
+                    .fa-angle-left{
+                        .intro-more{
+                            border-top: 2px solid var(--link-text-color);
+                            border-bottom: 2px solid var(--link-text-color);
+                            padding: 0.5rem;
+                            margin: 1rem 0.5rem;
+                            transition: 0.3s ease;
+                            &:hover{
+                                color: white;
+                                background: var(--link-text-color);
+                            }
                         }
                     }
                 }
             }
-        }
-        
-        .intro-img-container{
-            width: 50%;
-            margin: 1rem 0;
-            img{
-                width: 100%;
-                transition: 0.6s;
-                 &:hover{
-                    transform: scale(1.1);
-                    -webkit-box-shadow: 0px -2px 18px 5px rgba(100, 147, 185, 1);
-                    -moz-box-shadow: 0px -2px 18px 5px rgba(100, 147, 185, 1);
-                    box-shadow: 0px -2px 18px 5px rgba(100, 147, 185, 1);
+            
+            .intro-img-container{
+                width: 50%;
+                margin: 1rem 0;
+                img{
+                    width: 100%;
+                    transition: 0.6s;
+                     &:hover{
+                        transform: scale(1.1);
+                        -webkit-box-shadow: 0px -2px 18px 5px rgba(100, 147, 185, 1);
+                        -moz-box-shadow: 0px -2px 18px 5px rgba(100, 147, 185, 1);
+                        box-shadow: 0px -2px 18px 5px rgba(100, 147, 185, 1);
+                    }
                 }
+            }
+        }
+    }
+    .posts{
+        .listing-posts{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            list-style-type: none;
+            grid-gap: 1rem;
+            li{
+                a{
+                    position: relative;
+                    height: 10rem;
+                    display: flex;
+                    -webkit-box-orient: vertical;
+                    -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                    flex-direction: column;
+                    -ms-flex-pack: distribute;
+                    justify-content: space-between;
+                    background-image: url('../images/post-bgr.gif');
+                    color: white;
+                    text-transform: uppercase;
+                    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+                    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+                    box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+                    .overlay{
+                        position: absolute;
+                        background-color: rgba(255,255,255,0.2);
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        top: 0;
+                        bottom: 0;
+                        z-index: 20;
+                        transition: 0.4s ease;
+                        &:hover{
+                            background-color: rgba(255,255,255,0);
+                        }
+                    }
+                    span{
+                        margin: 1rem;
+                    }
+                    .date{
+                        border-top: 1px solid;
+                    }
+                }
+            }
+            li:first-child{
+                grid-column: 1/3;
+            }
+            li:nth-child(3){
+                grid-column: 2;
             }
         }
     }
@@ -88,10 +147,10 @@ main, footer{
             .intro-div{
                 flex-direction: column;
                 .intro-text{
-                    width: 75%
+                    width: 100%;
                 }
                 .intro-img-container{
-                    width: 75%;
+                    width: 100%;
                 }
             }
         }
@@ -109,6 +168,12 @@ main, footer{
                 .intro-img-container{
                     width: 100%;
                 }
+            }
+        }
+        .posts{
+            .listing-posts{
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr;
             }
         }
     }

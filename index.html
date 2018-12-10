@@ -28,10 +28,11 @@ layout: site
 </section>
 <section class="posts">
     <h1>Posts</h1>
-    <ul class="listing posts">
+    <ul class="listing-posts">
             {% for post in site.posts %}
             <li>
                 <a href="{{ site.baseurl }}{{ post.url }}">
+                    <div class="overlay"></div>
                     <span class="title">{{ post.title }}</span>
                     <span class="date">{{ post.date | date_to_string }}</span>
                 </a>
