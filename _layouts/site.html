@@ -6,6 +6,7 @@
             <title>{{site.title}}</title>
             <link rel="shortcut icon" type="image/png" href="{{site.baseurl}}/images/9167.png"/>
             <link rel="stylesheet" href="{{ site.baseurl }}/css/styles.css" type="text/css" />
+            <script src="{{site.baserul}}{{ site.baseurl }}/scripts/app.js"></script>
         </head>
         <body class="{% if page.type %}{{page.type}} {% endif %}{% if page.title %}{{ page.title | slugify }}{% else %}home{% endif %}">
                 <div class="site">
@@ -27,6 +28,10 @@
                                     <a class="fas fa-user-secret" href="{{ site.baseurl }}/about/"></a>
                                     <span class="nav-label">About</span>
                                 </li>
+                                <li class="darkmode-button">
+                                    <a class="fas fa-moon" href="javascript:void(0);" onclick="switchmode()"></a>
+                                    <span class="nav-label">Darkmode</span>
+                                </li>
                                 <!-- <li class="login-button"><a class="fas fa-key" href="{{ site.baseurl }}/login/">Login</a></li> -->
                             </ul>
                         </nav>
@@ -39,4 +44,5 @@
                     </footer>
                 </div>
         </body>
+        <script>window.onload = darkmode();</script>
 </html>

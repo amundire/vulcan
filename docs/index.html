@@ -6,6 +6,7 @@
             <title>Vulcan</title>
             <link rel="shortcut icon" type="image/png" href="/vulcan/images/9167.png"/>
             <link rel="stylesheet" href="/vulcan/css/styles.css" type="text/css" />
+            <script src="/vulcan/scripts/app.js"></script>
         </head>
         <body class="home">
                 <div class="site">
@@ -27,6 +28,10 @@
                                     <a class="fas fa-user-secret" href="/vulcan/about/"></a>
                                     <span class="nav-label">About</span>
                                 </li>
+                                <li class="darkmode-button">
+                                    <a class="fas fa-moon" href="javascript:void(0);" onclick="switchmode()"></a>
+                                    <span class="nav-label">Darkmode</span>
+                                </li>
                                 <!-- <li class="login-button"><a class="fas fa-key" href="/vulcan/login/">Login</a></li> -->
                             </ul>
                         </nav>
@@ -36,7 +41,7 @@
     <h1>Welcome to Vulcan</h1>
         <div class="intro-div">
             <div class="intro-text">
-            <p>
+            <p class="site-desc">
                 This is my Vulcan theme. Mainly inspired by the <a href="https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_ak47_cu_ak47_rubber_light_large.5836c38d3037a5a1f90ffdc8c9d0b94367ca8efd.png">AK-47 | Vulcan</a> CS:GO weapon skin.
                 The main idea I had for this static site was making it a lot like a video game interface.
                 The architecture and layout will look like the recent <a href="https://assets.rockpapershotgun.com/images/2018/08/counter-strike-global-offensive-main-panorama-ui-b.jpg/RPSS/resize/760x-1/format/jpg/quality/70">Panorama UI</a> in CS:GO.
@@ -83,18 +88,18 @@
             </li>
             
             <li>
-                <a href="/vulcan/jekyll/update/2018/12/06/post5.html">
+                <a href="/vulcan/jekyll/update/2018/12/06/post4.html">
                     <div class="overlay"></div>
-                    <span class="title">post5</span>
+                    <span class="title">post4</span>
                     <span class="date">06 Dec 2018</span>
                 </a>
             </li>
             
             <li>
-                <a href="/vulcan/2018/12/03/post4.html">
+                <a href="/vulcan/jekyll/update/2018/12/06/post5.html">
                     <div class="overlay"></div>
-                    <span class="title">Post4</span>
-                    <span class="date">03 Dec 2018</span>
+                    <span class="title">post5</span>
+                    <span class="date">06 Dec 2018</span>
                 </a>
             </li>
             
@@ -107,7 +112,7 @@
             <img src="/vulcan/images/70.jpg">
         </div>
         <article>
-            <h1>Panoramic View</h1>
+            <h2>Panoramic View</h2>
             <p>Date: <span class="featured-date">March 23, 2019</span></p>
             <p>Valve have rolled Counter-Strike: Global Offensive‘s shiny new user interface, 
                 named ‘Panorama’, out as the default after weeks of public testing. It’s light,
@@ -128,4 +133,5 @@
                     </footer>
                 </div>
         </body>
+        <script>window.onload = darkmode();</script>
 </html>

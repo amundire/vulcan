@@ -6,6 +6,7 @@
             <title>Vulcan</title>
             <link rel="shortcut icon" type="image/png" href="/vulcan/images/9167.png"/>
             <link rel="stylesheet" href="/vulcan/css/styles.css" type="text/css" />
+            <script src="/vulcan/scripts/app.js"></script>
         </head>
         <body class="post5">
                 <div class="site">
@@ -26,6 +27,10 @@
                                 <li class="about-button">
                                     <a class="fas fa-user-secret" href="/vulcan/about/"></a>
                                     <span class="nav-label">About</span>
+                                </li>
+                                <li class="darkmode-button">
+                                    <a class="fas fa-moon" href="javascript:void(0);" onclick="switchmode()"></a>
+                                    <span class="nav-label">Darkmode</span>
                                 </li>
                                 <!-- <li class="login-button"><a class="fas fa-key" href="/vulcan/login/">Login</a></li> -->
                             </ul>
@@ -54,4 +59,5 @@
                     </footer>
                 </div>
         </body>
+        <script>window.onload = darkmode();</script>
 </html>

@@ -203,6 +203,7 @@ footer{
         flex-direction: column;
         .featured-img-container{
             width: 100%;
+            margin: 0;
         }
         article{
             width: 80%;
@@ -257,12 +258,25 @@ footer{
         h1{
             font-size: 3rem;
         }
+        .intro{
+            .intro-div{
+                .intro-img-container{
+                    overflow: hidden;
+                }
+                .intro-text{
+                    width: 100%;
+                }
+            }
+        }
         .featured-article{
             .featured-wrapper{
                 article{
                     .featured-anchor{
                         margin: 1rem 0;
                     }
+                }
+                .featured-img-container{
+                    overflow: hidden;
                 }
             }
         }

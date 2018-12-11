@@ -4,11 +4,19 @@ var browserSync = require('browser-sync').create();
 var $ = require('gulp-load-plugins')();
 
 var path = {
+	JS_SRC      : './scripts',
+	JS_DST      : './scripts',
 	SCSS_SRC	: './scss/**/*.scss',
 	SCSS_DST	: './css',
 	CSS_JKDST	: './docs/css',
 	HTML_SRC	: ['./*.html','./_posts/*.*','./_layouts/*.*', './_includes/*.*'],
 }
+
+gulp.task('js', function() {
+	gulp.src( path.JS_SRC )
+	.pipe(gulp.dest( path.JS_DST ))
+	.pipe(browserSync.stream({ match: '**/*.js' }));
+});
 
 gulp.task('scss', function () {
 	
@@ -23,8 +31,6 @@ gulp.task('scss', function () {
 	.pipe(gulp.dest( path.SCSS_DST ))
 	.pipe(gulp.dest( path.CSS_JKDST ))
 	.pipe(browserSync.stream({ match: '**/*.css' }))
-	;
-	
 });
 
 gulp.task('jekyll', function () {
@@ -42,10 +48,11 @@ gulp.task('serve', function() {
 		port: 4000
 	});
 	
+	gulp.watch(path.JS_SRC), ['js'];
 	gulp.watch(path.SCSS_SRC, ['scss']);
 	gulp.watch(path.HTML_SRC, ['jekyll']);
 	gulp.watch(path.HTML_SRC).on('change', browserSync.reload);
 	
 });
 
-gulp.task('default', ['scss','jekyll', 'serve']);
+gulp.task('default', ['scss','jekyll', 'serve', 'js']);
