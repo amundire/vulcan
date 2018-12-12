@@ -191,6 +191,49 @@ main, footer{
             }
         }
     }
+    .register{
+        form{
+            margin: auto;
+            width: 50%;
+            fieldset{
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                border: none;
+                background: #9fbbcc;
+                legend{
+                    text-align: center;
+                    position: absolute;
+                    top: 0;
+                    font-size: 2rem;
+                }
+                p:first-of-type{
+                    margin-top: 3rem;
+                }
+                p{
+                    margin: 0.4rem 0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    input{
+                        padding: 0.5rem;
+                        border: none;
+                        border-bottom: 2px solid cyan;
+                    }
+                }
+                .button{
+                    padding: 0.8rem;
+                    margin-bottom: 1rem;
+                    border-radius: 2rem;
+                    width: 50%;
+                    background: #171717;
+                    color: white;
+                    border-color: var(--link-text-color);
+                }
+            }
+        }
+    }
 }
 footer{
     text-align: center;
@@ -278,6 +321,16 @@ footer{
                 .featured-img-container{
                     overflow: hidden;
                 }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 420px){
+    .site-content{
+        .register{
+            form{
+                width: auto;
             }
         }
     }
