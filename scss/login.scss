@@ -1,0 +1,142 @@
+.site-content{
+    .login{
+        display: flex;
+        flex-direction: row;
+        .login-media{
+            width: 50%;
+            color: white !important;
+            .login-media-button{
+                margin: auto;
+                width: 60%;
+                text-align: center;
+                height: 20%;
+                line-height: 3.5rem;
+                text-transform: uppercase;
+                font-size: 1.1rem;
+                margin-bottom: 1rem;
+                cursor: pointer;
+                i{
+                    margin: 0 0.5rem;
+                }
+            }
+            .login-media-first-section{
+                height: 50%;
+                background: darkslategray;
+                .login-media-desc{
+                    color: white !important;
+                    text-transform: uppercase;
+                    letter-spacing: 0.15rem;
+                    text-align: center;
+                    width: 70%;
+                    margin: auto auto;
+                    padding-top: 1.1rem;
+                }
+                .create-account{
+                    background: black;
+                }
+                .login-media-divisor{
+                    text-align: center;
+                    margin-top: 1rem;
+                }
+            }
+            .login-media-second-section{
+                height: 50%;
+                background: darkslategray;
+                .login-twitter{   
+                    background: rgb(51, 79, 243);
+                }
+                .login-facebook{
+                    background: rgb(3, 57, 138);
+                }
+            }
+        }
+        .login-wrapper{
+            display: flex;
+            flex-direction: row;
+            width: 50%;
+            form{
+                margin: auto;
+                width: 100%;
+                fieldset{
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    border: none;
+                    background: #9fbbcc;
+                    legend{
+                        text-align: center;
+                        position: absolute;
+                        top: 0;
+                        font-size: 2rem;
+                        width: 100%;
+                    }
+                    p:first-of-type{
+                        margin-top: 3rem;
+                    }
+                    p{
+                        margin: 0.4rem 0;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        input{
+                            padding: 0.5rem;
+                            border: none;
+                            border-bottom: 2px solid cyan;
+                            border-top: 2px solid white;
+                            border-left: 2px solid white;
+                            border-right: 2px solid white;
+                            &:hover{
+                                border: 2px solid cyan;
+                            }
+                            &:focus{
+                                border: 2px solid red;
+                            }
+                        }
+                    }
+                    .button{
+                        padding: 0.8rem;
+                        margin-bottom: 1rem;
+                        border-radius: 2rem;
+                        width: 50%;
+                        background: #171717;
+                        color: white;
+                        border-color: var(--link-text-color);
+                        margin: 1rem auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .site-content{
+        .login{
+            flex-direction: column;
+            .login-media,
+            .login-wrapper{
+                width: 100%;
+                height: 28rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 320px){
+    body.login{
+        .site-content{
+            margin: 0 0 5rem;
+            .login{
+                .login-media-button{
+                    width: 95%;
+                }
+                .login-media{
+                    .login-media-first-section{
+                        height: 63%;
+                    }
+                }
+            }
+        }
+    }
+}

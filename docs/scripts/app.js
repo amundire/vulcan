@@ -1,4 +1,5 @@
-function switchmode(){
+function switchmode(e){
+    e.preventDefault();
     let mode = localStorage.getItem('darkmode');
     if(mode == '0' || mode == undefined){
         toggledarkmode();

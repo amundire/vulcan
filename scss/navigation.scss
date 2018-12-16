@@ -32,7 +32,6 @@
                 }
                 .nav-label{
                     opacity: 0;
-                    color: black;
                     transition: 0.7s all ease;
                     text-transform: uppercase;
                     font-weight: 600;
@@ -46,15 +45,23 @@
 }
 
 @media screen and (max-width: 801px){
-    .navigation{
-        position: initial !important;
-        display: flex;
-        justify-content: center;
-        ul{
+    .site-header{
+        width: 50%;
+        .navigation{
+            position: initial !important;
             display: flex;
-            li{
-                flex-direction: column;
+            justify-content: center;
+            ul{
+                display: flex;
+                li{
+                    flex-direction: column;
+                    width: 4rem;
+                    a{
+                        width: 33%;
+                    }
+                }
             }
         }
     }
+    
 }
